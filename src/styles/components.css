@@ -1,0 +1,152 @@
+/* Component Specific Custom Styles */
+
+.reze-manga-card,
+.stroke-breakout-card {
+  position: relative !important;
+  overflow: visible !important; 
+  border: 4px solid #030712;
+  border-radius: 24px;
+  background-color: #030712;
+  box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.dark .reze-manga-card,
+.dark .stroke-breakout-card {
+  border-color: #FFFFFF;
+  box-shadow: 8px 8px 0px 0px rgba(255,255,255,0.9);
+}
+
+.reze-manga-card:hover,
+.stroke-breakout-card:hover {
+  box-shadow: 12px 12px 0px 0px rgba(0,0,0,1);
+}
+
+.dark .reze-manga-card:hover,
+.dark .stroke-breakout-card:hover {
+  box-shadow: 12px 12px 0px 0px rgba(255,255,255,1);
+}
+
+.manga-inner-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #090D16;
+}
+
+.reze-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: contrast(115%) grayscale(25%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.reze-manga-card:hover .reze-photo-img {
+  transform: scale(1.06);
+  filter: contrast(125%) grayscale(0%);
+}
+
+.tech-barcode {
+  display: inline-block;
+  height: 20px;
+  width: 58px;
+  border: 2px solid #030712 !important;
+  background-color: #FFFFFF !important;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #030712 0px,
+    #030712 2px,
+    #FFFFFF 2px,
+    #FFFFFF 3px,
+    #030712 3px,
+    #030712 6px,
+    #FFFFFF 6px,
+    #FFFFFF 7px,
+    #030712 7px,
+    #030712 8px,
+    #FFFFFF 8px,
+    #FFFFFF 10px
+  ) !important;
+  vertical-align: middle;
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+}
+
+.dark .tech-barcode {
+  border-color: #FFFFFF !important;
+  box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.8);
+}
+
+.tech-stack-title,
+.glitch-hover-title {
+  transition: color 0.15s ease;
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+}
+
+.tech-stack-title:hover,
+.glitch-hover-title:hover {
+  animation: continuous-glitch 0.2s infinite linear;
+}
+
+.neo-neon-glitch {
+  text-shadow: 3px 3px 0px #FF4D8D, -2px -2px 0px #0038FF;
+}
+
+.matrix-tile {
+  border-radius: 2px;
+  transition: background-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease;
+}
+
+.walking-pet {
+  animation: pet-bounce 0.75s ease-in-out infinite;
+}
+
+.neo-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.neo-btn:active {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 1px 1px 0px 0px rgba(0,0,0,1) !important;
+}
+
+.eq-bar {
+  display: inline-block;
+  width: 3px;
+  background: #FACC15;
+  animation: eq-bounce 1s ease-in-out infinite alternate;
+}
+.eq-bar:nth-child(1) { height: 12px; animation-delay: 0.1s; }
+.eq-bar:nth-child(2) { height: 18px; animation-delay: 0.3s; }
+.eq-bar:nth-child(3) { height: 10px; animation-delay: 0.2s; }
+.eq-bar:nth-child(4) { height: 15px; animation-delay: 0.4s; }
+
+.corner-ticks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.corner-ticks::before,
+.corner-ticks::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: currentColor;
+}
+.corner-ticks::before {
+  top: 6px;
+  left: 6px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.corner-ticks::after {
+  bottom: 6px;
+  right: 6px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}

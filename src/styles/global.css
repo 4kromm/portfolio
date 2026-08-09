@@ -1,0 +1,7 @@
+/* Global CSS for Akrom Portfolio (Astro) */
+
+@import './variables.css';
+@import './base.css';
+@import './patterns.css';
+@import './components.css';
+@import './animations.css';

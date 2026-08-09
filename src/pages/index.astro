@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Overview from '../components/Overview.astro';
+import TechArsenalWrapper from '../components/TechArsenalWrapper.astro';
+import Projects from '../components/Projects.astro';
+import LifeLogs from '../components/LifeLogs.astro';
+import Footer from '../components/Footer.astro';
+import Modal from '../components/Modal.astro';
+---
+
+<Layout title="4krom Portfolio">
+  <Navbar />
+
+  <main class="w-full relative">
+    <Hero />
+    <Overview />
+    <TechArsenalWrapper />
+    <Projects />
+    <LifeLogs />
+    <Footer />
+  </main>
+
+  <Modal />
+
+  <script is:inline src="/js/features/core.js"></script>
+  <script is:inline src="/js/features/dino-game.js"></script>
+  <script is:inline src="/js/features/github-snake.js"></script>
+  <script is:inline src="/js/features/projects.js"></script>
+  <script is:inline src="/js/features/interactive.js"></script>
+  <script is:inline src="/js/main.js"></script>
+</Layout>

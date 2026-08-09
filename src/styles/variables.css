@@ -1,0 +1,50 @@
+/* Color & Theme Variables */
+
+:root {
+  --color-bg: #FAFAFA;
+  --color-card-bg: #FFFFFF;
+  --color-card-alt: #F4F2EB;
+  --color-text: #030712;
+  --color-border: #030712;
+  --color-pink: #FF4D8D;
+  --color-blue: #0038FF;
+  --color-yellow: #FACC15;
+  --color-green: #22C55E;
+  --color-mint: #A7F3D0;
+  --color-orange: #FF5500;
+}
+
+.dark {
+  --color-bg: #090D16;
+  --color-card-bg: #111827;
+  --color-card-alt: #1F2937;
+  --color-text: #F9FAFB;
+  --color-border: #F3F4F6;
+}
+
+.dark body {
+  background-color: #090D16;
+  color: #F9FAFB;
+}
+
+.dark .bg-white {
+  background-color: #111827 !important;
+  color: #F9FAFB !important;
+}
+
+.dark .bg-\[\#FAFAFA\] {
+  background-color: #090D16 !important;
+}
+
+.dark .bg-\[\#F4F2EB\] {
+  background-color: #1F2937 !important;
+  color: #F9FAFB !important;
+}
+
+.dark .text-gray-950, .dark .text-gray-900, .dark .text-gray-800 {
+  color: #F9FAFB !important;
+}
+
+.dark .border-gray-950, .dark .border-gray-900 {
+  border-color: #F3F4F6 !important;
+}
