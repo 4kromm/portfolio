@@ -4,7 +4,7 @@
 git clone https://github.com/4kromm/portofolio.git
 ```
 
-> 🔗 Live: [4kromm.github.io/portofolio](https://4kromm.github.io/portofolio/)
+> Live: (soom)
 
 ## Project Structure
 
@@ -48,6 +48,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build` | Build your production site to `./dist/` |
 | `npm run preview` | Preview your build locally, before deploying |
 
-## 👀 Want to learn more?
+## Want to learn more?
 
 Feel free to check [Astro's documentation](https://docs.astro.build) or the source code in `src/components/`.
