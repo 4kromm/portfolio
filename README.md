@@ -6,7 +6,7 @@ git clone https://github.com/4kromm/portofolio.git
 
 > 🔗 Live: [4kromm.github.io/portofolio](https://4kromm.github.io/portofolio/)
 
-## 🚀 Project Structure
+## Project Structure
 
 Inside of this Astro project, you'll see the following folders and files:
 
@@ -37,7 +37,7 @@ There's nothing special about `src/components/`, but that's where all the sectio
 
 Global styles live in `src/styles/` (base, animations, components, patterns, variables). Static assets and vanilla JS features (project filter, inspect-code modal, dino game, GitHub snake, audio player) live in `public/`.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
