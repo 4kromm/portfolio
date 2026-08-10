@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "editor-browser",
+            "type": "chrome",
             "request": "launch",
-            "name": "Open index.html",
-            "url": "file:///c%3A/Users/AKROM/.gemini/antigravity/scratch/akrom-portfolio/index.html"
+            "name": "Open index.astro",
+            "url": "file:///c%3A/Users/AKROM/.gemini/antigravity/scratch/akrom-portfolio/pages/index.astro"
         }
     ]
 }
