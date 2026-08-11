@@ -40,7 +40,7 @@ function initProjectModal() {
 
   const projectDetails = {
     '01': {
-      title: 'akrom-portfolio2 / Projects.astro',
+      title: 'akrom-portfolio2',
       image: '/assets/images/projects/Portfolio.jpg'
     },
     '02': {
