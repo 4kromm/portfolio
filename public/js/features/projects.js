@@ -52,7 +52,7 @@ function initProjectModal() {
       image: '/assets/images/projects/spy.jpg'
     },
     '04': {
-      title: 'inventory-system / InventoryStore.lua',
+      title: 'inventory-system',
       image: '/assets/images/projects/inventory-system.png'
     },
     '05': {
