@@ -44,16 +44,16 @@ function initProjectModal() {
       image: '/assets/images/projects/Portfolio.jpg'
     },
     '02': {
-      title: 'shopgrid-market / theme.js',
-      image: '/assets/images/projects/shopgrid-market.png'
+      title: 'pkkmb poster',
+      image: '/assets/images/projects/pkkmb.jpg'
     },
     '03': {
       title: 'gameplay & matchmaking system',
       image: '/assets/images/projects/spy.jpg'
     },
     '04': {
-      title: 'inventory-system',
-      image: '/assets/images/projects/inventory-system.png'
+      title: 'rentiva',
+      image: '/assets/images/projects/rentiva.jpg'
     },
     '05': {
       title: 'kantinku ui/ux design',
