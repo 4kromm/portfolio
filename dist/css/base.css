@@ -1,0 +1,118 @@
+:root {
+  --color-bg: #FAFAFA;
+  --color-card-bg: #FFFFFF;
+  --color-card-alt: #F4F2EB;
+  --color-text: #030712;
+  --color-border: #030712;
+  --color-pink: #FF4D8D;
+  --color-blue: #0038FF;
+  --color-yellow: #FACC15;
+  --color-green: #22C55E;
+  --color-mint: #A7F3D0;
+  --color-orange: #FF5500;
+}
+
+.dark {
+  --color-bg: #090D16;
+  --color-card-bg: #111827;
+  --color-card-alt: #1F2937;
+  --color-text: #F9FAFB;
+  --color-border: #F3F4F6;
+}
+
+.dark body {
+  background-color: #090D16;
+  color: #F9FAFB;
+}
+
+.dark .bg-white {
+  background-color: #111827 !important;
+  color: #F9FAFB !important;
+}
+
+.dark .bg-\[\#FAFAFA\] {
+  background-color: #090D16 !important;
+}
+
+.dark .bg-\[\#F4F2EB\] {
+  background-color: #1F2937 !important;
+  color: #F9FAFB !important;
+}
+
+.dark .text-gray-950, .dark .text-gray-900, .dark .text-gray-800 {
+  color: #F9FAFB !important;
+}
+
+.dark .border-gray-950, .dark .border-gray-900 {
+  border-color: #F3F4F6 !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Space Mono', monospace;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+  border-left: 2px solid #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #FACC15;
+  border: 2px solid #030712;
+  box-shadow: inset -1px -1px 0px #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF4D8D;
+}
+
+.halftone-bg {
+  background-color: #FAFAFA;
+  background-image: radial-gradient(rgba(3, 7, 18, 0.22) 1.5px, transparent 1.5px);
+  background-size: 34px 34px;
+}
+.dark .halftone-bg {
+  background-color: #090D16;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.25) 1.5px, transparent 1.5px);
+}
+
+.grid-blueprint-bg {
+  background-size: 48px 48px, 48px 48px, 12px 12px, 12px 12px;
+  background-image: 
+    linear-gradient(to right, rgba(3, 7, 18, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(3, 7, 18, 0.07) 1px, transparent 1px),
+    linear-gradient(to right, rgba(3, 7, 18, 0.022) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(3, 7, 18, 0.022) 1px, transparent 1px);
+}
+.dark .grid-blueprint-bg {
+  background-size: 48px 48px, 48px 48px, 12px 12px, 12px 12px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+}
+
+.halftone-dots {
+  background-image: radial-gradient(#030712 1.3px, transparent 1.3px);
+  background-size: 6.5px 6.5px;
+}
+.dark .halftone-dots {
+  background-image: radial-gradient(#FFFFFF 1.3px, transparent 1.3px);
+}

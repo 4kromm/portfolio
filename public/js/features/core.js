@@ -68,23 +68,36 @@ function initMobileMenu() {
 
 function initThemeToggle() {
   const toggleBtn = document.getElementById('theme-toggle-btn');
+  const toggleBtnMobile = document.getElementById('theme-toggle-btn-mobile');
   const iconSpan = document.getElementById('theme-icon');
-  if (!toggleBtn || !iconSpan) return;
+  const iconSpanMobile = document.getElementById('theme-icon-mobile');
 
-  const savedTheme = localStorage.getItem('akrom-theme');
-  if (savedTheme === 'dark') {
-    document.documentElement.classList.add('dark');
-    iconSpan.textContent = '🌙';
-  } else {
-    iconSpan.textContent = '☀️';
+  function updateThemeUI(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      if (iconSpan) iconSpan.textContent = '🌙';
+      if (iconSpanMobile) iconSpanMobile.textContent = '🌙';
+    } else {
+      document.documentElement.classList.remove('dark');
+      if (iconSpan) iconSpan.textContent = '☀️';
+      if (iconSpanMobile) iconSpanMobile.textContent = '☀️';
+    }
   }
 
-  toggleBtn.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    const isDark = document.documentElement.classList.contains('dark');
-    localStorage.setItem('akrom-theme', isDark ? 'dark' : 'light');
-    iconSpan.textContent = isDark ? '🌙' : '☀️';
-  });
+  // Determine initial state based on html class
+  const isDarkInitial = document.documentElement.classList.contains('dark');
+  updateThemeUI(isDarkInitial);
+
+  function handleToggle(e) {
+    if (e) e.preventDefault();
+    const isCurrentlyDark = document.documentElement.classList.contains('dark');
+    const newDarkState = !isCurrentlyDark;
+    localStorage.setItem('akrom-theme', newDarkState ? 'dark' : 'light');
+    updateThemeUI(newDarkState);
+  }
+
+  if (toggleBtn) toggleBtn.addEventListener('click', handleToggle);
+  if (toggleBtnMobile) toggleBtnMobile.addEventListener('click', handleToggle);
 }
 
 function initBabelTicker() {

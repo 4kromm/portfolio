@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <!-- Neubrutalist 3D Shadow -->
+  <rect x="14" y="14" width="132" height="132" rx="20" fill="#090D16"/>
+  
+  <!-- Main Badge Outer Container -->
+  <rect x="8" y="8" width="132" height="132" rx="20" fill="#FF4D8D" stroke="#090D16" stroke-width="6"/>
+  
+  <!-- Top Accent Block (Yellow) -->
+  <path d="M 8 28 C 8 17 17 8 28 8 L 112 8 C 123 8 132 17 132 28 L 132 50 L 8 50 Z" fill="#FACC15" stroke="#090D16" stroke-width="6"/>
+
+  <!-- Small Blue Accent Dot -->
+  <rect x="108" y="20" width="14" height="14" rx="3" fill="#0038FF" stroke="#090D16" stroke-width="3"/>
+
+  <!-- Stylized "A" / "AK" Mark -->
+  <g transform="translate(28, 42)">
+    <!-- A Left Leg -->
+    <path d="M 12 70 L 36 12 L 56 12 L 32 70 Z" fill="#FFFFFF" stroke="#090D16" stroke-width="5" stroke-linejoin="round"/>
+    
+    <!-- A Right Leg -->
+    <path d="M 36 12 L 56 12 L 80 70 L 56 70 Z" fill="#FFFFFF" stroke="#090D16" stroke-width="5" stroke-linejoin="round"/>
+    
+    <!-- A Crossbar (Blue Box) -->
+    <rect x="26" y="40" width="40" height="14" rx="2" fill="#0038FF" stroke="#090D16" stroke-width="4"/>
+
+    <!-- K Wing / Sharp Arrow (Yellow) -->
+    <path d="M 52 36 L 76 16 L 86 24 L 62 44 Z" fill="#FACC15" stroke="#090D16" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M 58 42 L 84 64 L 74 72 L 48 50 Z" fill="#FACC15" stroke="#090D16" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Bottom Label Bar "AKROM" -->
+  <rect x="22" y="112" width="104" height="22" rx="6" fill="#090D16"/>
+  <text x="74" y="127" font-family="'Space Mono', 'Oswald', monospace" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">AKROM</text>
+</svg>
