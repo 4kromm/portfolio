@@ -111,7 +111,7 @@ function initBabelTicker() {
     { label: 'TS', text: 'const dev: Dev = "akrom";' },
     { label: 'PY', text: 'print(f"Async Engine {v2}")' },
     { label: 'RS', text: 'println!("Hello Rust!");' },
-    { label: 'REZE', text: 'Reze Cafe Lo-Fi' },
+    { label: 'REZE', text: 'Marin Cafe Lo-Fi' },
     { label: 'JPN', text: 'こんにちは、世界！' },
     { label: 'RUS', text: 'Привет, мир!' },
     { label: 'CPP', text: 'std::cout << "Akrom System";' },
