@@ -1,2 +1,2 @@
 node_modules
-public/data/github-stats.json
+git add -f public/data/github-stats.json
