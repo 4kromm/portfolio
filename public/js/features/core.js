@@ -142,3 +142,18 @@ function initBabelTicker() {
     }, 250);
   }, 2200);
 }
+
+async function initGithubStats() {
+  try {
+    const res = await fetch('/data/github-stats.json');
+    if (!res.ok) throw new Error('Gagal fetch github-stats.json');
+    const stats = await res.json();
+
+    const badge = document.getElementById('commit-badge');
+    if (badge) {
+      badge.textContent = `01 • ${stats.totalCommits} COMMITS`;
+    }
+  } catch (err) {
+    console.warn('Could not load github stats:', err);
+  }
+}
