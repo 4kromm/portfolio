@@ -4,7 +4,7 @@
 git clone https://github.com/4kromm/portofolio.git
 ```
 
-> Live: (soom)
+> Live: (https://www.akrom.my.id/)
 
 ## Project Structure
 
