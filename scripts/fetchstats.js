@@ -5,12 +5,12 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const USERNAME = '4kromm'; 
+const USERNAME = '4kromm';
 
 const query = `
-query($login: String!) {
+query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
-    contributionsCollection {
+    contributionsCollection(from: $from, to: $to) {
       totalCommitContributions
       contributionCalendar {
         totalContributions
@@ -38,13 +38,20 @@ async function main() {
     process.exit(1);
   }
 
+  const now = new Date();
+  const startOfYear = new Date(Date.UTC(now.getUTCFullYear(), 0, 1)).toISOString();
+  const nowIso = now.toISOString();
+
   const res = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ query, variables: { login: USERNAME } })
+    body: JSON.stringify({
+      query,
+      variables: { login: USERNAME, from: startOfYear, to: nowIso }
+    })
   });
 
   const json = await res.json();
@@ -67,7 +74,8 @@ async function main() {
     totalRepos: user.repositories.totalCount,
     totalPRs: user.pullRequests.totalCount,
     totalIssues: user.issues.totalCount,
-    updatedAt: new Date().toISOString()
+    year: now.getUTCFullYear(),
+    updatedAt: now.toISOString()
   };
 
   const outDir = path.join(__dirname, '..', 'public', 'data');
@@ -85,4 +93,4 @@ main().catch(err => {
   process.exit(1);
 });
 
-  
+
