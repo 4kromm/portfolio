@@ -1,15 +1,15 @@
 function initDinoGame() {
   const canvas = document.getElementById('dinoCanvas');
-  const wrapper = document.getElementById('dino-canvas-wrapper');
+  const wrapper = document.getElementById('dinoCanvasWrapper');
   if (!canvas || !wrapper) return;
 
-  const btnMinimize = document.getElementById('dino-btn-minimize');
-  const btnMaximize = document.getElementById('dino-btn-maximize');
-  const btnClose = document.getElementById('dino-btn-close');
-  const themeBadge = document.getElementById('dino-theme-badge');
-  const modeLabel = document.getElementById('dino-mode-label');
-  const sysStatus = document.getElementById('dino-sys-status');
-  const autopilotBadge = document.getElementById('dino-autopilot-badge');
+  const btnMinimize = document.getElementById('dinoBtnMinimize');
+  const btnMaximize = document.getElementById('dinoBtnMaximize');
+  const btnClose = document.getElementById('dinoBtnClose');
+  const themeBadge = document.getElementById('dinoThemeBadge');
+  const modeLabel = document.getElementById('dinoModeLabel');
+  const sysStatus = document.getElementById('dinoSysStatus');
+  const autopilotBadge = document.getElementById('dinoAutopilotBadge');
 
   const ctx = canvas.getContext('2d');
 
@@ -25,13 +25,13 @@ function initDinoGame() {
     cactiSmall: [new Image(), new Image(), new Image()]
   };
 
-  dinoSprites.idle.src = 'assets/dino/dino-idle.png';
-  dinoSprites.run.src = 'assets/dino/dino-run.png';
+  dinoSprites.idle.src = 'assets/dino/dinoIdle.png';
+  dinoSprites.run.src = 'assets/dino/dinoRun.png';
   dinoSprites.ground.src = 'assets/dino/ground.png';
   dinoSprites.cloud.src = 'assets/dino/cloud.png';
   dinoSprites.moon.src = 'assets/dino/moon.png';
   dinoSprites.stars.src = 'assets/dino/stars.png';
-  dinoSprites.bird.src = 'assets/dino/enemy-bird.png';
+  dinoSprites.bird.src = 'assets/dino/enemyBird.png';
 
   for (let i = 0; i < 3; i++) {
     dinoSprites.cactiBig[i].src = `assets/dino/cactuses_big_${i + 1}.png`;

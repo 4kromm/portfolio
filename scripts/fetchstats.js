@@ -81,11 +81,11 @@ async function main() {
   const outDir = path.join(__dirname, '..', 'public', 'data');
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(
-    path.join(outDir, 'github-stats.json'),
+    path.join(outDir, 'githubStats.json'),
     JSON.stringify(stats, null, 2)
   );
 
-  console.log('Berhasil update github-stats.json:', stats);
+  console.log('Berhasil update githubStats.json:', stats);
 }
 
 main().catch(err => {

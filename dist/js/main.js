@@ -11,4 +11,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   initLiveClock();
   initCopyEmail();
   initGifFallbacks();
+  initGithubStats();
 });

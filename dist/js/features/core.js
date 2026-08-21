@@ -20,10 +20,10 @@ async function loadComponents() {
 }
 
 function initMobileMenu() {
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const menuClose = document.getElementById('mobile-menu-close');
-  const overlay = document.getElementById('mobile-menu-overlay');
-  const drawer = document.getElementById('mobile-menu-drawer');
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const menuClose = document.getElementById('mobileMenuClose');
+  const overlay = document.getElementById('mobileMenuOverlay');
+  const drawer = document.getElementById('mobileMenuDrawer');
   const navLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (!menuBtn || !overlay || !drawer) return;
@@ -67,10 +67,10 @@ function initMobileMenu() {
 }
 
 function initThemeToggle() {
-  const toggleBtn = document.getElementById('theme-toggle-btn');
-  const toggleBtnMobile = document.getElementById('theme-toggle-btn-mobile');
-  const iconSpan = document.getElementById('theme-icon');
-  const iconSpanMobile = document.getElementById('theme-icon-mobile');
+  const toggleBtn = document.getElementById('themeToggleBtn');
+  const toggleBtnMobile = document.getElementById('themeToggleBtnMobile');
+  const iconSpan = document.getElementById('themeIcon');
+  const iconSpanMobile = document.getElementById('themeIconMobile');
 
   function updateThemeUI(isDark) {
     if (isDark) {
@@ -101,8 +101,8 @@ function initThemeToggle() {
 }
 
 function initBabelTicker() {
-  const phraseEl = document.getElementById('babel-phrase');
-  const tagEl = document.getElementById('babel-tag');
+  const phraseEl = document.getElementById('babelPhrase');
+  const tagEl = document.getElementById('babelTag');
   if (!phraseEl || !tagEl) return;
 
   const phrases = [
@@ -111,7 +111,7 @@ function initBabelTicker() {
     { label: 'TS', text: 'const dev: Dev = "akrom";' },
     { label: 'PY', text: 'print(f"Async Engine {v2}")' },
     { label: 'RS', text: 'println!("Hello Rust!");' },
-    { label: 'REZE', text: 'Marin Cafe Lo-Fi' },
+    { label: 'REZE', text: 'Reze Cafe Lo-Fi' },
     { label: 'JPN', text: 'こんにちは、世界！' },
     { label: 'RUS', text: 'Привет, мир!' },
     { label: 'CPP', text: 'std::cout << "Akrom System";' },
@@ -141,4 +141,19 @@ function initBabelTicker() {
       phraseEl.classList.remove('opacity-0');
     }, 250);
   }, 2200);
+}
+
+async function initGithubStats() {
+  try {
+    const res = await fetch('/data/githubStats.json');
+    if (!res.ok) throw new Error('Gagal fetch githubStats.json');
+    const stats = await res.json();
+
+    const badge = document.getElementById('commitBadge');
+    if (badge) {
+      badge.textContent = `01 • ${stats.totalCommits} COMMITS`;
+    }
+  } catch (err) {
+    console.warn('Could not load github stats:', err);
+  }
 }

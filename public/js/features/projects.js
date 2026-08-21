@@ -30,10 +30,10 @@ function initProjectFilter() {
 }
 
 function initProjectModal() {
-  const modal = document.getElementById('project-modal');
-  const closeBtn = document.getElementById('modal-close-btn');
-  const modalTitle = document.getElementById('modal-title');
-  const modalImage = document.getElementById('modal-image');
+  const modal = document.getElementById('projectModal');
+  const closeBtn = document.getElementById('modalCloseBtn');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalImage = document.getElementById('modalImage');
   const inspectBtns = document.querySelectorAll('.inspect-project-btn');
 
   if (!modal || !closeBtn) return;

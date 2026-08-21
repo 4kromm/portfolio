@@ -1,7 +1,7 @@
 function initGithubSnakeMatrix() {
-  const gridEl = document.getElementById('github-matrix-grid');
-  const wrapper = document.getElementById('matrix-wrapper');
-  const counterEl = document.getElementById('eaten-counter');
+  const gridEl = document.getElementById('githubMatrixGrid');
+  const wrapper = document.getElementById('matrixWrapper');
+  const counterEl = document.getElementById('eatenCounter');
 
   if (!gridEl || !wrapper || !counterEl) return;
 

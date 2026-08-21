@@ -1,7 +1,7 @@
 function initLofiPlayer() {
-  const playBtn = document.getElementById('lofi-play-btn');
-  const statusEl = document.getElementById('lofi-status');
-  const eqEl = document.getElementById('lofi-eq');
+  const playBtn = document.getElementById('lofiPlayBtn');
+  const statusEl = document.getElementById('lofiStatus');
+  const eqEl = document.getElementById('lofiEq');
 
   if (!playBtn) return;
 
@@ -41,7 +41,7 @@ function initLofiPlayer() {
 }
 
 function initLiveClock() {
-  const clockEl = document.getElementById('live-clock');
+  const clockEl = document.getElementById('liveClock');
   if (!clockEl) return;
 
   function updateClock() {
@@ -62,8 +62,8 @@ function initLiveClock() {
 }
 
 function initCopyEmail() {
-  const copyBtn = document.getElementById('copy-email-btn');
-  const toast = document.getElementById('email-toast');
+  const copyBtn = document.getElementById('copyEmailBtn');
+  const toast = document.getElementById('emailToast');
 
   if (!copyBtn) return;
 
